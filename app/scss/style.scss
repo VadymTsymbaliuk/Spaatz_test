@@ -1,15 +1,86 @@
+@font-face {
+  font-family: OpenSans;
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+}
+$light-dark: #1B2534;
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 html, body{
+  font-family: OpenSans, sans-serif;
   font-size: 14px;
-  color: red;
+  font-weight: 400;
+}
+h1{
+  font-size: 4rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 3.25rem;
+  font-weight: 700;
+}
+h3{
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+h4{
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 header{
+  padding-top: 40px;
+  background-image: url("../images/header/header__bg.png");
   .container{
-    background-color: green;
+    padding: 0 50px;
+    .navbar{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .navbar-wrap{
+        //display: flex;
+        //flex-flow: row nowrap;
+
+        .navbar-menu{
+          list-style: none;
+          padding-left: 0;
+          margin-bottom: 0;
+          .navbar-item{
+            display: inline-block;
+            padding: 18px 30px;
+            a{
+              display: inline-block;
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+    section{
+      height: 955px;
+      margin-top: 30px;
+      text-align: center;
+      padding-top: 120px;
+      h1{
+        color: $light-dark;
+        line-height: 104px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        a{
+          text-decoration: none;
+          color: #29A0F5;
+        }
+      }
+    }
+  }
+}
+main{
+  .container {
+    padding: 0 50px;
   }
 }
 

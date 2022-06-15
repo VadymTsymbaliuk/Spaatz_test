@@ -8,11 +8,7 @@ const jsmin = require("gulp-jsmin");
 const appPath = {
     scss: './app/scss/**/*.scss',
     pug: './app/index.pug',
-    img:[
-        './app/images/**/*.jpg',
-        './app/images/**/*.png',
-        './app/images/**/*.svg',
-    ],
+    img: './app/images/**/*.*',
     js:'./app/js/*.js'
 };
 const destPath = {
@@ -44,7 +40,7 @@ function buildStyles() {
 function imageMin() {
     return src(appPath.img)
         .pipe(imagemin())
-        .pipe(dest(destPath.img))
+        .pipe(dest(destPath.images))
         .pipe(connect.reload())
 };
 function jsMin(){
@@ -72,4 +68,4 @@ function watchCode() {
     watch(appPath.js, jsMin);
 }
 
-exports.default = series(buildStyles, buildHtml,jsMin, parallel(server,watchCode))
+exports.default = series(buildStyles, buildHtml,imageMin, jsMin, parallel(server,watchCode))
