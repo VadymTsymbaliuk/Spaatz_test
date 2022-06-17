@@ -12,10 +12,10 @@ const appPath = {
     js:'./app/js/*.js'
 };
 const destPath = {
-    css: './dest/css',
-    html: './dest',
-    images:'./dest/images',
-    js:'./dest/js/'
+    css: './css',
+    html: './',
+    images:'./images',
+    js:'./js/'
 };
 
 const jsPath=[
