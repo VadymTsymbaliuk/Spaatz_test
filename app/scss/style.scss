@@ -2,75 +2,97 @@
   font-family: OpenSans;
   src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 }
-$light-dark: #1B2534;
 
-*{
+$light-dark: #1B2534;
+$basic-text: #1B2534;
+
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-html, body{
+
+html, body {
   font-family: OpenSans, sans-serif;
   font-size: 14px;
   font-weight: 400;
+  color: $basic-text;
 }
-h1{
+
+h1 {
   font-size: 4rem;
   font-weight: 700;
 }
+
 h2 {
   font-size: 3.25rem;
   font-weight: 700;
 }
-h3{
+
+h3 {
   font-size: 1.75rem;
   font-weight: 700;
 }
-h4{
+
+h4 {
   font-size: 1.5rem;
   font-weight: 700;
 }
-header{
+
+header {
   padding-top: 40px;
   background-image: url("../images/header/header__bg.png");
-  .container{
+
+  .container {
     padding: 0 50px;
-    .navbar{
+
+    .navbar {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      .navbar-wrap{
-        //display: flex;
-        //flex-flow: row nowrap;
+      .toggle__menu {
+        display: none;
+      }
 
-        .navbar-menu{
-          list-style: none;
-          padding-left: 0;
-          margin-bottom: 0;
-          .navbar-item{
+      .navbar-menu {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        .navbar-item {
+          display: inline-block;
+          padding: 18px 30px;
+
+          a {
             display: inline-block;
-            padding: 18px 30px;
-            a{
-              display: inline-block;
-              padding: 10px 0;
+            padding: 10px 0;
+            color: $basic-text;
+            text-decoration: none;
+
+            &:hover {
+              color: #0082F3;
             }
           }
         }
       }
     }
-    section{
+
+    section {
       height: 955px;
       margin-top: 30px;
       text-align: center;
       padding-top: 120px;
-      h1{
+
+      h1 {
         color: $light-dark;
         line-height: 104px;
         letter-spacing: 2px;
         text-transform: capitalize;
-        a{
+
+        a {
           text-decoration: none;
           color: #29A0F5;
         }
@@ -78,9 +100,136 @@ header{
     }
   }
 }
-main{
+
+main {
   .container {
     padding: 0 50px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  header {
+    .container {
+      padding: 0 30px;
+
+      .navbar {
+        justify-content: space-between;
+        position: relative;
+
+        .toggle__menu {
+          display: block;
+          position: relative;
+          right: 0;
+          top: 0;
+          overflow: hidden;
+          width: 40px;
+          height: 40px;
+          box-shadow: none;
+          cursor: pointer;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+
+          span {
+            display: block;
+            position: absolute;
+            top: 17px;
+            left: 7px;
+            right: 7px;
+            height: 4px;
+            background: #fff;
+
+            &::before, &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 100%;
+              left: 0;
+              height: 4px;
+              background: #fff;
+            }
+
+            &::before {
+              top: -10px;
+            }
+
+            &::after {
+              bottom: -10px;
+            }
+          }
+        }
+
+        .toggle__animation {
+          background: none;
+
+          span {
+            transition: background 0s .3s;
+
+            &::before, &::after {
+              transition-duration: 0.3s, .3s;
+              transition-delay: .3s, 0s;
+            }
+
+            &::before {
+              transition-property: top, transform;
+            }
+
+            &::after {
+              transition-property: bottom, transform;
+            }
+          }
+        }
+
+        .toggle__animation.is-active {
+          //background-color: #1b2534;
+
+          span {
+            background: none;
+
+            &::before, &::after {
+              transition-delay: 0s, .3s;
+            }
+
+            &::before {
+              top: 0;
+              transform: rotate(-45deg);
+            }
+
+            &::after {
+              bottom: 0;
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        .navbar-menu {
+          display: block;
+          height: 360px;
+          width: 100%;
+          justify-content: center;
+          text-align: center;
+          margin-top: -410px;
+          position: absolute;
+          top: 90px;
+          bottom: 0;
+          flex-direction: column;
+          //z-index: 0;
+          background: #29a0f5;
+          transition: all ease 1s;
+        }
+
+        .navbar-menu.open {
+          display: flex;
+          margin-top: 0;
+        }
+      }
+      .section__header.move__down{
+        margin-top: 360px;
+      }
+    }
+  }
+}
+
 
