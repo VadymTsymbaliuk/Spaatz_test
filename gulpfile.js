@@ -12,11 +12,11 @@ const appPath = {
     js:'./app/js/*.js'
 };
 const destPath = {
-    css: './dest/css',
-    html: './dest',
-    images:'./dest/images',
-    js:'./dest/js/'
-};
+    css: './css',
+    html: './',
+    img: './img',
+    js:'./js'
+}
 
 const jsPath=[
     './node_modules/jquery/dist/jquery.min.js',
