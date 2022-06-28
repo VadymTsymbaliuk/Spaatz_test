@@ -60,7 +60,7 @@ html(lang="en")
                         div.col
                             h2 Capture & convert excellent leads <span>more easily.</span>
                             p You can control the inbox like Turn Off Notifications, Choose When You Check In, Don’t Default to Email, Compose mail and reply the mail you want.
-                        div.co1
+                        div.col
                             img(src="./images/main/sec-2/sec-2_img-workers.png")
                     div.row.section-2__items-container
                         div.col.section-2__item
@@ -76,10 +76,11 @@ html(lang="en")
                             img(src="./images/main/sec-2/sec-2_img-third.png")
                     div.row.section-2__items-container
                         div.col.section-2__item
-                            img(src="./images/main/sec-2/sec-2_img-chart.png")
-                            h3 Watch
-                                | and learn
-                            button.btn  Explore App
+                            .section-2__item__img-container
+                                img(src="./images/main/sec-2/sec-2_img-chart.png")
+                            div.section-2__item-content
+                                h3 Watch <br> and learn
+                                button.btn.btn__blue  Explore App
 
                         div.col.section-2__item
                             h3 Image, Video, Audio
@@ -90,25 +91,27 @@ html(lang="en")
                                 img(src="./images/main/sec-2/sec-2_img-video.svg")
                                 img(src="./images/main/sec-2/sec-2_img-gif.svg")
 
-                section.section-3
-                    h2 software that drives employee <span> Engagement & productivity</span>
-                    div
-                        div
-                            div
-                                h3 Flexible & Powerful
-                                p Branding is the process of developing a company's brand, including name.
-                            div
-                                h3 Simplified Workflow
-                                p Standard model of data storage in which the digital data and zip files are is stored.
-                            div
-                                h3 Branded Scheduling
-                                p Workflow management system designed to compose and execute a series.
-                            div
-                                h3 Reporting Analytics
-                                p Activity related to selling or the amount of services sold in a given time period.
-                        div
-                            img(src="./images/main/sec-4/sec-4_img-first.png")
-                section.section-4
+            section.section-3
+                .container
+                        h2.text-center software that drives employee <br><span> Engagement & productivity</span>
+                        div.row
+                            div.col.software-items__container
+                                div.software-item.active
+                                    h3 Flexible & Powerful
+                                    p Branding is the process of developing a company's brand, including name.
+                                div.software-item
+                                    h3 Simplified Workflow
+                                    p Standard model of data storage in which the digital data and zip files are is stored.
+                                div.software-item
+                                    h3 Branded Scheduling
+                                    p Workflow management system designed to compose and execute a series.
+                                div.software-item
+                                    h3 Reporting Analytics
+                                    p Activity related to selling or the amount of services sold in a given time period.
+                            div.col.img__container
+                                img(src="./images/main/sec-4/sec-4_img-first.png" alt="img")
+            section.section-4
+                .container
                     h2 Featured Feedback
                     div
                         p <span>Spaatz</span>helps us to build processes and automation into my business like a
@@ -120,8 +123,8 @@ html(lang="en")
                             img(src="./images/main/sec-5/sec-5_img-rating.svg")
                     div
                         img(src="./images/main/sec-5/sec-5_img-user.png")
-                section.section-5
-                    div
+            section.section-5
+                    div.container
                         h4 Loved by teams around the world
                         div.brand__container
                             img(src="./images/main/sec-6/sec-6_img-mhome.svg")
@@ -164,7 +167,9 @@ html(lang="en")
                                     span.article-date December 22, 2021
 
 
-                section.section-6
+            section.section-6
+                .container
+                    div section 6
         footer
             div
                 h2 footer

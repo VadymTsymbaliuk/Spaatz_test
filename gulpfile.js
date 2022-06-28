@@ -13,10 +13,10 @@ const appPath = {
 };
 const destPath = {
     css: './css',
-    html: '/',
-    images:'./images',
+    html: './',
+    img: './img',
     js:'./js'
-};
+}
 
 const jsPath=[
     './node_modules/jquery/dist/jquery.min.js',
@@ -40,7 +40,7 @@ function buildStyles() {
 function imageMin() {
     return src(appPath.img)
         .pipe(imagemin())
-        .pipe(dest(destPath.images))
+        .pipe(dest(destPath.img))
         .pipe(connect.reload())
 };
 function jsMin(){
@@ -53,7 +53,7 @@ function jsMin(){
 function server(){
     connect.server({
         name:'Dev App',
-        root:'dest',
+        root:'./',
         port:8080,
         livereload: true
     })
