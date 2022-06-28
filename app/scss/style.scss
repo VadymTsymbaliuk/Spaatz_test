@@ -326,6 +326,7 @@ main {
 
         .row {
           padding-top: 30px;
+
           .software-items__container {
             .software-item {
               padding: 10px 0;
@@ -364,10 +365,96 @@ main {
 
     &.section-4 {
       background-color: #1B2534;
+      padding-top: 139px;
+      padding-bottom: 140px;
+
+      h2 {
+        display: inline-block;
+        color: #fff;
+        position: relative;
+        margin-bottom: 40px;
+        padding-right: 74px;
+
+        &:after {
+          position: absolute;
+          top: 17px;
+          right: 0;
+          content: "";
+          width: 44px;
+          height: 40px;
+          background-image: url('../images/main/sec-4/sec-6_img__single-star.svg');
+        }
+      }
+
+      .feedback__container {
+        .feedback__info {
+
+          p {
+            font-size: 2.5rem;
+            line-height: 46px;
+            color: #ABABAB;
+
+            span {
+              color: #fff
+            }
+          }
+
+          .feedback__info-rating {
+            padding-top: 90px;
+
+            h3 {
+              color: #fff
+            }
+
+            span {
+              font-size: 18px;
+              line-height: 29px;
+              color: #ABABAB;
+            }
+
+            div {
+              img {
+              }
+            }
+          }
+        }
+      }
     }
 
     &.section-5 {
-      background-color: #e5e5e5;
+      background-color: #fff;
+
+      .container {
+        h4 {
+          text-align: center;
+        }
+
+        .brand__container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 90px;
+        }
+
+        .article__container {
+          display: flex;
+          padding-top: 90px;
+          .article__item {
+            padding: 0 15px;
+            .article__item-logo{
+              img{
+                max-width: 453px;
+                width: 100%;
+              }
+            }
+            .article__author {
+              .article__author-avatar{
+
+              }
+            }
+          }
+        }
+      }
     }
 
     &.section-6 {
