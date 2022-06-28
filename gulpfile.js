@@ -14,7 +14,7 @@ const appPath = {
 const destPath = {
     css: './css',
     html: './',
-    img: './img',
+    img: './images',
     js:'./js'
 }
 
