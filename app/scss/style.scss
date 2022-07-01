@@ -437,19 +437,14 @@ main {
         }
 
         .article__container {
-          display: flex;
           padding-top: 90px;
+          padding-bottom: 75px;
           .article__item {
             padding: 0 15px;
             .article__item-logo{
               img{
                 max-width: 453px;
                 width: 100%;
-              }
-            }
-            .article__author {
-              .article__author-avatar{
-
               }
             }
           }
@@ -459,6 +454,17 @@ main {
 
     &.section-6 {
       background: linear-gradient(294.27deg, #30A8FF 0%, #C4F5C9 100%);
+      padding-top: 119px;
+      padding-bottom: 0;
+      .container{
+        .section-6__img-container{
+          margin-top: 19px;
+          margin-bottom: -20px;
+          img{
+            max-width: 100%;
+          }
+        }
+      }
     }
   }
 }
