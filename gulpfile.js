@@ -6,6 +6,7 @@ const connect = require("gulp-connect");
 const jsmin = require("gulp-jsmin");
 
 const appPath = {
+    webfonts: 'node_modules/@fortawesome/fontawesome-free/webfonts/*',
     scss: './app/scss/**/*.scss',
     pug: './app/index.pug',
     img: './app/images/**/*.*',
@@ -15,7 +16,8 @@ const destPath = {
     css: './css',
     html: './',
     img: './images',
-    js:'./js'
+    js:'./js',
+
 }
 
 const jsPath=[
@@ -37,6 +39,7 @@ function buildStyles() {
         .pipe(dest(destPath.css))
         .pipe(connect.reload())
 };
+
 function imageMin() {
     return src(appPath.img)
         .pipe(imagemin())

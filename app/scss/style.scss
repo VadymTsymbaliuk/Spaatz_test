@@ -1,5 +1,6 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
+
 @font-face {
   font-family: OpenSans;
   src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
@@ -382,7 +383,7 @@ main {
           content: "";
           width: 44px;
           height: 40px;
-          background-image: url('../images/main/sec-4/sec-6_img__single-star.svg');
+          background-image: url('../images/main/sec-4/sec-4_img__single-star.svg');
         }
       }
 
@@ -439,12 +440,54 @@ main {
         .article__container {
           padding-top: 90px;
           padding-bottom: 75px;
+
           .article__item {
+            margin-top: 10px;
             padding: 0 15px;
-            .article__item-logo{
-              img{
+
+            h3 {
+              margin-top: 27px;
+              margin-bottom: 23px;
+            }
+
+            .article__item-logo {
+              img {
                 max-width: 453px;
                 width: 100%;
+              }
+            }
+
+            .article__author {
+              .article__author-avatar {
+                float: left;
+              }
+
+              div {
+                margin-top: 18px;
+                margin-left: 88px;
+                color: #606060;
+
+                .article-author__name {
+                  display: block;
+                  font-weight: 700;
+                  color: #1B2534;
+                }
+
+                .article-date {
+                  padding-right: 20px;
+                  position: relative;
+
+                  &::after {
+                    position: absolute;
+                    content: "";
+                    top: 5px;
+                    right: 8px;
+                    width: 5px;
+                    height: 5px;
+                    background-color: #29A0F5;
+                    border-radius: 50%;
+                  }
+                }
               }
             }
           }
@@ -456,11 +499,13 @@ main {
       background: linear-gradient(294.27deg, #30A8FF 0%, #C4F5C9 100%);
       padding-top: 119px;
       padding-bottom: 0;
-      .container{
-        .section-6__img-container{
+
+      .container {
+        .section-6__img-container {
           margin-top: 19px;
           margin-bottom: -20px;
-          img{
+
+          img {
             max-width: 100%;
           }
         }
@@ -470,6 +515,128 @@ main {
 }
 
 footer {
+  background-color: #1B2534;
+  z-index: 2;
+  position: relative;
+  color: #ABABAB;
+
+  .section__footer {
+    padding: 100px 20px 60px;
+
+    .container {
+      //a{
+      //  color: #ABABAB;
+      //  text-decoration: none;
+      //}
+      .footer__about-company__container {
+        max-width: 270px;
+
+        .footer-logo__container {
+          margin-bottom: 7px;
+
+          p {
+            margin-top: 22px;
+            margin-bottom: 0;
+          }
+        }
+
+        .social-media__container {
+          padding-top: 150px;
+          padding-bottom: 22px;
+
+          span {
+            width: 20px;
+            height: 20px;
+            padding: 0 15px;
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            a {
+              position: relative;
+
+              svg {
+                max-height: 20px;
+                max-width: 20px;
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-categories__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 70px;
+        background-color: #283343;
+        border-radius: 30px;
+
+        .list__wrapper {
+          ul {
+            list-style: none;
+            padding-top: 19px;
+            padding-left: 0;
+
+            span {
+              font-weight: 700;
+              margin-bottom: 20px;
+              display: block;
+              color: #fff;
+            }
+
+            li {
+              margin-bottom: 17px;
+
+              a {
+                text-decoration: none;
+                color: #ABABAB;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-promo__container {
+        div {
+
+          text-align: center;
+          position: relative;
+
+          &:after {
+            position: absolute;
+            top: calc(50% - 43px);
+            left: calc(50% - 43px);
+            content: "";
+            width: 87px;
+            height: 87px;
+            background-image: url('../images/footer/play__btn.svg');
+          }
+        }
+      }
+      .footer__info-section{
+        margin-top: 9px;
+        padding-top: 20px;
+        border-top: 1px solid #606060;
+        .footer__nav-container__wrapper{
+          .footer__nav-container{
+            display: flex;
+            justify-content: end;
+            gap: 47px;
+            list-style: none;
+            li{
+              a{
+                text-decoration: none;
+                color: #ababab;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
